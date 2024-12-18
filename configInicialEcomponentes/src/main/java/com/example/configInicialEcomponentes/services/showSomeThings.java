@@ -44,6 +44,7 @@ public class showSomeThings {
         Optional<veiculos> veiculo = veicul.stream()
         .filter(veiculos -> veiculos.getId() == id).findFirst();
 
+
         return veiculo.get();
     }
 
