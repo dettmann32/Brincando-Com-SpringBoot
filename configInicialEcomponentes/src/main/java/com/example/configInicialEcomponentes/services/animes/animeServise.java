@@ -41,4 +41,14 @@ public class animeServise {
         
     }
 
+    public void deletAnime(long id) {
+        animeRepository.delete(listarId(id));
+    }
+
+    public void replaceAnime(animeDTO anime) {
+       Anime animeAtt = listarId(anime.id());
+       animeAtt.setName(anime.name());
+       animeRepository.save(animeAtt); 
+    }
+
 }
