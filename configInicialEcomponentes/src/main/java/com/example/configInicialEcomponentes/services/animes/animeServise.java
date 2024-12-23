@@ -10,6 +10,7 @@ import org.springframework.web.server.ResponseStatusException;
 
 import com.example.configInicialEcomponentes.database.Anime;
 import com.example.configInicialEcomponentes.database.AnimeRepository;
+import com.example.configInicialEcomponentes.mapper.animeMapper;
 
 import lombok.AllArgsConstructor;
 
@@ -30,13 +31,16 @@ public class animeServise {
     }
 
     public Anime createAnime(animeDTO anime){
-        Anime newAnime = Anime
-        .builder()
-        .id(anime.id())
-        .name(anime.name())
-        .build();
 
-        return animeRepository.save(newAnime);
+        //EXEMPLO USANDO UM BUILDER
+        // Anime newAnime = Anime
+        // .builder()
+        // .id(anime.id())
+        // .name(anime.name())
+        // .build();
+
+        //EXEMPLO USANDO MAPSTRUCT
+        return animeRepository.save(animeMapper.intanse.toAnime(anime));
 
         
     }
