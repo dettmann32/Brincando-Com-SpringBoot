@@ -30,6 +30,10 @@ public class animeServise {
         .orElseThrow(()-> new ResponseStatusException(HttpStatus.BAD_REQUEST,"bad request"));
     }
 
+    public List<Anime> listarName(String name){
+        return animeRepository.findByname(name);
+    }
+
     public Anime createAnime(animeDTO anime){
 
         //EXEMPLO USANDO UM BUILDER

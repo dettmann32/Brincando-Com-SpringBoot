@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -58,8 +59,16 @@ public class controller {
     }
 
     @GetMapping("/animes/{id}")
-    public ResponseEntity<Anime> listarId(@PathVariable long id){
+    public ResponseEntity<Anime> listarId(@RequestParam long id){
         return ResponseEntity.ok(aServise.listarId(id));
+    }
+
+    //@RequestParam foi adicionado no commit de requestparam
+    //ele substitui o @PathVariable
+    //nsse caso a url de uma requisição seria "dominio.com/animes/find?name=<nome do anime>"
+    @GetMapping("/animes/find")
+    public ResponseEntity<List<Anime>> listarName(@RequestParam String name){
+        return ResponseEntity.ok(aServise.listarName(name));
     }
 
     @PostMapping("/animes")

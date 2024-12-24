@@ -5,10 +5,13 @@ server:
 spring:
     
   datasource:
-      url: jdbc:mysql://10.0.0.127:3306/testes?useSSL=false&createDatabaseIfNotExist=true&allowPublicKeyRetrieval=true
+      url: jdbc:mysql://10.0.0.127:3306/testes?allowPublicKeyRetrieval=true
       username: root
       password: 123456
 
 jpa:
   hibernate:
       ddl-auto: update
+
+      # isso é para mostrar o sql gerado no console
+      show-sql: true
