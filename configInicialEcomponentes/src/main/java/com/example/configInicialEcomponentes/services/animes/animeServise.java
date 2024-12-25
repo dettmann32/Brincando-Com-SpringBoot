@@ -12,6 +12,7 @@ import com.example.configInicialEcomponentes.database.AnimeRepository;
 import com.example.configInicialEcomponentes.mapper.animeMapper;
 import com.example.exeptions.BadRequestExeption;
 
+import jakarta.transaction.Transactional;
 import lombok.AllArgsConstructor;
 
 @AllArgsConstructor
@@ -34,6 +35,14 @@ public class animeServise {
         return animeRepository.findByname(name);
     }
 
+    //ESSA ANOTAÇÃO IMPEDE QUE OCORRA ERRO NO BANCO DE DADOS
+    //CASO OCORRA ALGUM ERRO NO BANCO DE DADOS ELE FAZ UM ROLLBACK
+    //isso quer dizer que ele desfaz as alterações feitas no banco de dados
+    //oque evita que o banco de dados fique em um estado inconsistente.
+    //é uportante notar que ela, por padrão, não funciona em exeções do tipo checked
+    //para que ela funcione em exeções do tipo checked é necessario usar a anotação @Transactional(rollbackFor = {Exeption.class})
+
+    @Transactional
     public Anime createAnime(animeDTO anime){
 
         //EXEMPLO USANDO UM BUILDER
