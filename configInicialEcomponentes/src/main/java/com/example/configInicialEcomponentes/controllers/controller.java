@@ -31,26 +31,6 @@ import lombok.AllArgsConstructor;
 public class controller {
     
     final animeServise aServise;
-    final showSomeThings show;
-
-   
-
-    @GetMapping
-    public ResponseEntity<List<String>> listar(){
-        
-        return ResponseEntity.ok(show.listar());
-
-    }
-
-    @GetMapping("/listVei")
-    public ResponseEntity<List<veiculos>> listarVeiculos(){
-        return ResponseEntity.ok(show.listarVeiculos());
-    }
-
-    @GetMapping("/listVei/{id}")
-    public ResponseEntity<veiculos> veiculoById(@PathVariable int id){
-        return ResponseEntity.ok(show.getById(id));
-    }
 
     //ESSE METODO FOI ALTERADO PARA SUPORTAR PAGINAÇÃO
     //O PAGEABLE É UM OBJETO QUE CONTÉM INFORMAÇÕES SOBRE A PAGINAÇÃO
