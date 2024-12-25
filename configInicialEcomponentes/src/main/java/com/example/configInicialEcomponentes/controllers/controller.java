@@ -13,12 +13,9 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.example.configInicialEcomponentes.database.Anime;
-import com.example.configInicialEcomponentes.services.showSomeThings;
-import com.example.configInicialEcomponentes.services.veiculos;
 import com.example.configInicialEcomponentes.services.animes.animeDTO;
 import com.example.configInicialEcomponentes.services.animes.animeServise;
 
