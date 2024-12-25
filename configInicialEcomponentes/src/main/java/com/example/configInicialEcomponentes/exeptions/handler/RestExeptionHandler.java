@@ -1,4 +1,4 @@
-package com.example.exeptions.handler;
+package com.example.configInicialEcomponentes.exeptions.handler;
 
 import java.time.LocalDateTime;
 
@@ -7,8 +7,8 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 
-import com.example.exeptions.BadRequestExeption;
-import com.example.exeptions.BadRequestExeptionsDetails;
+import com.example.configInicialEcomponentes.exeptions.BadRequestExeption;
+import com.example.configInicialEcomponentes.exeptions.BadRequestExeptionsDetails;
 
 
 //ESSA ANOTAÇÃO SERVE PARA OS CONTROLLERS OBSERVAREM O CODIGO QUE ESTA DENTRO DESSA CLASSE

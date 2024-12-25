@@ -2,15 +2,15 @@ package com.example.configInicialEcomponentes.services.animes;
 
 import java.util.List;
 
-
-import org.apache.coyote.BadRequestException;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
 
 import com.example.configInicialEcomponentes.database.Anime;
 import com.example.configInicialEcomponentes.database.AnimeRepository;
+import com.example.configInicialEcomponentes.exeptions.BadRequestExeption;
 import com.example.configInicialEcomponentes.mapper.animeMapper;
-import com.example.exeptions.BadRequestExeption;
 
 import jakarta.transaction.Transactional;
 import lombok.AllArgsConstructor;
@@ -21,9 +21,10 @@ public class animeServise {
 
     final AnimeRepository animeRepository;
     
-    
-     public List<Anime> listarAnime(){
-        return animeRepository.findAll();
+     //esse metodo foi alterado para suportar paginação
+     //veja também detalhes sobre a paginação no controller.java
+     public Page<Anime> listarAnime(Pageable pageable){
+        return animeRepository.findAll(pageable);
     }
 
     public Anime listarId(Long ids){
@@ -32,7 +33,7 @@ public class animeServise {
     }
 
     public List<Anime> listarName(String name){
-        return animeRepository.findByname(name);
+        return animeRepository.findByname(name).orElseThrow(() -> new BadRequestExeption("bad request exeption, name"));
     }
 
     //ESSA ANOTAÇÃO IMPEDE QUE OCORRA ERRO NO BANCO DE DADOS

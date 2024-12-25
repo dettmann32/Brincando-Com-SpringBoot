@@ -1,11 +1,10 @@
 package com.example.configInicialEcomponentes.controllers;
 
-import java.net.http.HttpResponse;
 import java.util.List;
 
-import org.apache.coyote.BadRequestException;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.http.HttpStatus;
-import org.springframework.http.HttpStatusCode;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -53,11 +52,17 @@ public class controller {
         return ResponseEntity.ok(show.getById(id));
     }
 
+    //ESSE METODO FOI ALTERADO PARA SUPORTAR PAGINAÇÃO
+    //O PAGEABLE É UM OBJETO QUE CONTÉM INFORMAÇÕES SOBRE A PAGINAÇÃO
+    //COMO O TAMANHO DA PAGINA, A PAGINA ATUAL, ETC
+    //o metodo listarAnime foi alterado para suportar paginação também
 
+    //a paginação pode ser filtrade por parametros na url, da seguinte forma
+    //dominio.com/animes?page=0&size=5 por exemplo. com as flags apos o "?"
     @GetMapping("/animes")
-    public ResponseEntity<List<Anime>> listarAnime(){
+    public ResponseEntity<Page<Anime>> listarAnime(Pageable pageable){
         
-        return ResponseEntity.ok(aServise.listarAnime());
+        return ResponseEntity.ok(aServise.listarAnime(pageable));
     }
 
     @GetMapping("/animes/{id}")

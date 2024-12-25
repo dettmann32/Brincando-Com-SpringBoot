@@ -1,4 +1,4 @@
-package com.example.exeptions;
+package com.example.configInicialEcomponentes.exeptions;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.ResponseStatus;
