@@ -42,6 +42,12 @@ public class controller {
         return ResponseEntity.ok(aServise.listarAnime(pageable));
     }
 
+    @GetMapping("/animes/Pageoff")
+    public ResponseEntity<List<Anime>> listarAnimePageoff(){
+        
+        return ResponseEntity.ok(aServise.listarAnimePageoff());
+    }
+
     @GetMapping("/animes/{id}")
     public ResponseEntity<Anime> listarId(@PathVariable long id){
         return ResponseEntity.ok(aServise.listarId(id));

@@ -13,5 +13,5 @@ jpa:
   hibernate:
       ddl-auto: update
 
-      # isso é para mostrar o sql gerado no console
-      show-sql: true
+  # isso é para mostrar o sql gerado no console
+  show-sql: true

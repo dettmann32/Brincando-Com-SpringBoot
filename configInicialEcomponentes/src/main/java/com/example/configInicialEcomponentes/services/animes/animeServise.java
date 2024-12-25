@@ -69,4 +69,8 @@ public class animeServise {
        animeRepository.save(animeAtt); 
     }
 
+    public List<Anime> listarAnimePageoff() {
+        return animeRepository.findAll();
+    }
+
 }
