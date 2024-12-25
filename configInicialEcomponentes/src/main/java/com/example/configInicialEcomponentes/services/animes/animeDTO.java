@@ -1,4 +1,7 @@
 package com.example.configInicialEcomponentes.services.animes;
 
-public record animeDTO(Long id, String name) {
+import jakarta.validation.constraints.NotEmpty;
+import jakarta.validation.constraints.NotNull;
+
+public record animeDTO(Long id, @NotEmpty @NotNull String name) {
 }

@@ -23,6 +23,7 @@ import com.example.configInicialEcomponentes.services.veiculos;
 import com.example.configInicialEcomponentes.services.animes.animeDTO;
 import com.example.configInicialEcomponentes.services.animes.animeServise;
 
+import jakarta.validation.Valid;
 import lombok.AllArgsConstructor;
 
 
@@ -73,7 +74,7 @@ public class controller {
     }
 
     @PostMapping("/animes")
-    public ResponseEntity<Anime> createAnime(@RequestBody animeDTO anime){
+    public ResponseEntity<Anime> createAnime(@RequestBody @Valid animeDTO anime){
        return ResponseEntity.ok(aServise.createAnime(anime));
     }
 
