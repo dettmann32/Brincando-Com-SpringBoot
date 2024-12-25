@@ -3,6 +3,7 @@ package com.example.configInicialEcomponentes.controllers;
 import java.net.http.HttpResponse;
 import java.util.List;
 
+import org.apache.coyote.BadRequestException;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.HttpStatusCode;
 import org.springframework.http.ResponseEntity;
@@ -59,7 +60,7 @@ public class controller {
     }
 
     @GetMapping("/animes/{id}")
-    public ResponseEntity<Anime> listarId(@RequestParam long id){
+    public ResponseEntity<Anime> listarId(@PathVariable long id){
         return ResponseEntity.ok(aServise.listarId(id));
     }
 

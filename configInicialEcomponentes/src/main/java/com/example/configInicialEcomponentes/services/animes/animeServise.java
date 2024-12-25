@@ -1,16 +1,16 @@
 package com.example.configInicialEcomponentes.services.animes;
 
 import java.util.List;
-import java.util.Optional;
 
-import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
+
+import org.apache.coyote.BadRequestException;
 import org.springframework.stereotype.Service;
-import org.springframework.web.server.ResponseStatusException;
+
 
 import com.example.configInicialEcomponentes.database.Anime;
 import com.example.configInicialEcomponentes.database.AnimeRepository;
 import com.example.configInicialEcomponentes.mapper.animeMapper;
+import com.example.exeptions.BadRequestExeption;
 
 import lombok.AllArgsConstructor;
 
@@ -27,7 +27,7 @@ public class animeServise {
 
     public Anime listarId(Long ids){
         return animeRepository.findById(ids)
-        .orElseThrow(()-> new ResponseStatusException(HttpStatus.BAD_REQUEST,"bad request"));
+        .orElseThrow(()-> new BadRequestExeption("bad request exeption"));
     }
 
     public List<Anime> listarName(String name){
