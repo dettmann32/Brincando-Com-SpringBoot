@@ -2,7 +2,6 @@ package com.example.clientExemple;
 
 import java.util.List;
 
-import org.apache.coyote.Response;
 import org.springframework.core.ParameterizedTypeReference;
 import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpMethod;
