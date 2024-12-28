@@ -8,6 +8,10 @@ import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
+import org.springframework.dao.DataIntegrityViolationException;
+
+import jakarta.validation.ConstraintViolationException;
+import jakarta.validation.ValidationException;
 
 @DataJpaTest
 @DisplayName("Tests for Anime Repository")
@@ -71,6 +75,25 @@ public class AnimeRepositoryTest {
 
     }
 
+
+    @Test
+    @DisplayName("Find By Name return empty list when no anime is found")
+    void findByname_returnEmpytList_WhenAnimeIsNotFound(){
+        animeRepository.save(this.createAnime("Boku no Hero"));
+        Optional<List<Anime>> anime = animeRepository.findByname("Naruto");
+        Assertions.assertThat(anime.get()).isEmpty();
+    }
+
+    @Test
+    @DisplayName("Save throw ConstraintViolationException when name is empty")
+    void save_throwConstraintViolationException_WhenNameIsEmpty(){
+        Anime anime = new Anime();
+        Assertions.assertThatThrownBy(() -> animeRepository.save(anime))
+        .isInstanceOf(ConstraintViolationException.class)
+        .hasMessageContaining("The anime name cannot be empty"); //mensagem que é retornada quando a exceção é lançada (opcional)
+        //a tipagem do isInstanceOf é a exceção que é esperada e pode dar dor de cabeça se não for a mesma
+        
+    }
 
 
     private Anime createAnime(){
