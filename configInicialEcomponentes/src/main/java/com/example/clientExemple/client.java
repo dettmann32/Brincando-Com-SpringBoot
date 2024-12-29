@@ -30,7 +30,7 @@ public class client {
         ResponseEntity<List<Anime>> animePage = new RestTemplate().exchange("http://localhost:8080/animes/Pageoff", HttpMethod.GET, null, new ParameterizedTypeReference<List<Anime>>(){});
         System.out.println(animePage.getBody());
 
-        //essa requisição é feita ao servidor, e salma um objeto do tipo Anime no banco de dados
+        //essa requisição é feita ao servidor, e salva um objeto do tipo Anime no banco de dados
         Anime kingdom = Anime.builder().name("kingdom").build();
         ResponseEntity<Anime> kingsomAnime = new RestTemplate().exchange("http://localhost:8080/animes", 
         HttpMethod.POST, 
