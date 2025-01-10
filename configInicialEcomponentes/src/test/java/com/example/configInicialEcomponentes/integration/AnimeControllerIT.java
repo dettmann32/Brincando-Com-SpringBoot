@@ -3,6 +3,7 @@ package com.example.configInicialEcomponentes.integration;
 import java.util.List;
 
 import org.assertj.core.api.Assertions;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.jdbc.AutoConfigureTestDatabase;
@@ -33,6 +34,12 @@ public class AnimeControllerIT {
 
     @Autowired
     AnimeRepository animeRepository;
+
+    @BeforeEach
+    void seTup(){
+        animeRepository.save(AnimeCreator.createAnimeToBeSaved());
+        animeRepository.save(AnimeCreator.createAnimeToBeSaved("Naruto"));
+    }
     
     @Test
     void listOffPort(){
@@ -47,9 +54,6 @@ public class AnimeControllerIT {
 
     @Test
     void listarAnime(){
-
-        animeRepository.save(AnimeCreator.createAnimeToBeSaved());
-        animeRepository.save(AnimeCreator.createAnimeToBeSaved("Naruto"));
 
         ResponseEntity<PageableResponse<Anime>> exchange = testRestTemplate.exchange("http://localhost:"+ port +"/animes", 
         HttpMethod.GET, null, 

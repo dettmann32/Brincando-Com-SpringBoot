@@ -31,6 +31,12 @@
 		<java.version>17</java.version>
 	</properties>
 	<dependencies>
+		<!-- dependencia para springboot security -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-security</artifactId>
+		</dependency>
+
 		<!-- dpencia para validação de dados -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
@@ -107,6 +113,29 @@
 			<version>1.6.3</version>
 		</dependency>
 	</dependencies>
+
+	<profiles>
+		<!-- habilita o mvn para testes de integração -->
+		<profile>
+			<id>integration-tests</id>
+			<build>
+				<plugins>
+					<plugin>
+						<groupId>org.apache.maven.plugins</groupId>
+						<artifactId>maven-surefire-plugin</artifactId>
+						<version>${maven-surface-plugin.version}</version>
+						<configuration>
+							<includes>
+								<include>
+									**/*IT.*
+								</include>
+							</includes>
+						</configuration>
+					</plugin>
+				</plugins>
+			</build>
+		</profile>
+	</profiles>
 
 	<build>
 		<plugins>

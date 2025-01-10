@@ -1,12 +1,12 @@
-package com.example.configInicialEcomponentes;
+package com.example.demo;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
-//@SpringBootTest
-class ConfigInicialEcomponentesApplicationTests {
+@SpringBootTest
+class SecurityApplicationTests {
 
-	//@Test
+	@Test
 	void contextLoads() {
 	}
 
