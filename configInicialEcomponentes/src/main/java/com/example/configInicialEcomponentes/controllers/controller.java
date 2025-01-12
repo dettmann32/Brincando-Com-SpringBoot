@@ -29,6 +29,8 @@ public class controller {
     
     final animeServise aServise;
 
+
+
     //ESSE METODO FOI ALTERADO PARA SUPORTAR PAGINAÇÃO
     //O PAGEABLE É UM OBJETO QUE CONTÉM INFORMAÇÕES SOBRE A PAGINAÇÃO
     //COMO O TAMANHO DA PAGINA, A PAGINA ATUAL, ETC
@@ -79,5 +81,7 @@ public class controller {
         return new ResponseEntity<>(HttpStatus.NO_CONTENT);
         
     }
+
+    
     
 }
