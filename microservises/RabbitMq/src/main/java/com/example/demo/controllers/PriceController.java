@@ -7,7 +7,6 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.example.demo.config.rabbitMqConfig.RabbitMqConstants;
 import com.example.demo.dto.PriceDto;
 import com.example.demo.services.RabbitMqService;
 
@@ -23,7 +22,7 @@ public class PriceController {
 
     @PutMapping
     private ResponseEntity<HttpStatus> updatePrice(@RequestBody PriceDto PriceDto){
-        rabbitMqService.sendMessageToQueue(RabbitMqConstants.QUEUE_PRICE, PriceDto);
+        rabbitMqService.sendMessageToQueue("PRICE", PriceDto);
         return new ResponseEntity<>(HttpStatus.OK);
     }
 }

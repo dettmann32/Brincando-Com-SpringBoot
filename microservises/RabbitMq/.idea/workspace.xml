@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="6aed55e9-51b3-413e-8145-02fa8f517c4f" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../librabbitmq/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../librabbitmq/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../librabbitmq/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../librabbitmq/src/main/resources/META-INF/maven/archetype.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../librabbitmq/src/main/resources/archetype-resources/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../librabbitmq/src/main/resources/archetype-resources/src/main/java/App.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../librabbitmq/src/main/resources/archetype-resources/src/test/java/AppTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../rabbitmqlib/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../rabbitmqlib/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../rabbitmqlib/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../rabbitmqlib/src/main/java/EstoqueDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../rabbitmqlib/src/main/java/RabbitMqConstants.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../rabbitmqlib/src/main/resources/META-INF/maven/archetype.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../rabbitmqlib/src/main/resources/archetype-resources/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../rabbitmqlib/src/main/resources/archetype-resources/src/main/java/App.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../rabbitmqlib/src/main/resources/archetype-resources/src/test/java/AppTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/config/rabbitMqConfig/RabbitMqConnection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/config/rabbitMqConfig/RabbitMqConnection.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/config/rabbitMqConfig/RabbitMqConstants.java" beforeDir="false" afterPath="$PROJECT_DIR$/../librabbitmq/src/main/RabbitMqConstants.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/controllers/EstoqueController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/controllers/EstoqueController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/controllers/PriceController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/controllers/PriceController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/dto/EstoqueDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/../librabbitmq/src/main/EstoqueDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../RabbitMqConsumer/TesteConsumer/src/main/java/com/RabbitMqConsumer/TesteConsumer/consumer/EstoqueConsumer.java" beforeDir="false" afterPath="$PROJECT_DIR$/../RabbitMqConsumer/TesteConsumer/src/main/java/com/RabbitMqConsumer/TesteConsumer/consumer/EstoqueConsumer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../RabbitMqConsumer/TesteConsumer/src/main/java/com/RabbitMqConsumer/TesteConsumer/consumer/EstoqueDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/../RabbitMqConsumer/TesteConsumer/src/main/java/com/RabbitMqConsumer/TesteConsumer/consumer/EstoqueDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../RabbitMqConsumer/TesteConsumer/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../RabbitMqConsumer/TesteConsumer/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../RabbitMqConsumer/TesteConsumer/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../RabbitMqConsumer/TesteConsumer/target/classes/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../RabbitMqConsumer/TesteConsumer/target/classes/com/RabbitMqConsumer/TesteConsumer/consumer/EstoqueConsumer.class" beforeDir="false" afterPath="$PROJECT_DIR$/../RabbitMqConsumer/TesteConsumer/target/classes/com/RabbitMqConsumer/TesteConsumer/consumer/EstoqueConsumer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../RabbitMqConsumer/TesteConsumer/target/classes/com/RabbitMqConsumer/TesteConsumer/consumer/EstoqueDto.class" beforeDir="false" afterPath="$PROJECT_DIR$/../RabbitMqConsumer/TesteConsumer/target/classes/com/RabbitMqConsumer/TesteConsumer/consumer/EstoqueDto.class" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 1
+}]]></component>
+  <component name="ProjectId" id="2v0VcfQTupRY97QM9baKd337asK" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "debian",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/User/Documents/BrincandoComSpringBoot/Brincando-Com-SpringBoot/microservises/RabbitMq",
+    "settings.editor.selected.configurable": "reference.settings.project.maven.repository.indices"
+  }
+}]]></component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="6aed55e9-51b3-413e-8145-02fa8f517c4f" name="Changes" comment="" />
+      <created>1743282063267</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1743282063267</updated>
+    </task>
+    <servers />
+  </component>
+</project>

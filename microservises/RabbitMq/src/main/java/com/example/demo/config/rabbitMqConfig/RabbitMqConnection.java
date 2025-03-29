@@ -6,6 +6,8 @@ import org.springframework.amqp.core.AmqpAdmin;
 import org.springframework.amqp.core.Binding;
 import org.springframework.stereotype.Component;
 
+
+
 import jakarta.annotation.PostConstruct;
 
 @Component
@@ -21,8 +23,8 @@ public class RabbitMqConnection {
     @PostConstruct // essa anotação faz com que metodos sejam executados logo após a classe ser instanciada
     private void addNewQueue(){
         
-        Queue QueueEstoque = this.CreateQueue(RabbitMqConstants.QUEUE_ESTOQUE);
-        Queue QueuePrice = this.CreateQueue(RabbitMqConstants.QUEUE_PRICE);
+        Queue QueueEstoque = this.CreateQueue("PRICE");
+        Queue QueuePrice = this.CreateQueue("PRICE");
 
         DirectExchange exchange = this.CreateDirectExchange();
 
