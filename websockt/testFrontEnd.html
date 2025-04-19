@@ -1,0 +1,13 @@
+<script>
+    const socket = new WebSocket("ws://localhost:8080/meu-websocket");
+  
+    socket.onmessage = (event) => {
+      console.log("Mensagem recebida:", event.data);
+      document.getElementById("saida").innerText += event.data + "\n";
+    };
+  
+    socket.onopen = () => console.log("Conectado ao servidor WebSocket");
+</script>
+  
+<pre id="saida"></pre>
+  
